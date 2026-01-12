@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ABM</title>
+  <link rel="stylesheet" href="../ProjDesign.css" />
+  <style>
+    
+    .card {
+      transition: all 0.4s ease;
+      overflow: hidden;
+    }
+    .card:hover {
+      transform: scale(1.05);
+      max-height: 300px; 
+    }
+    .card.expanded {
+      grid-column: span 2; 
+      max-height: none;
+    }
+   .card-content {
+  display: none;
+  margin-top: 10px;
+  color: #444;
+  font-size: 0.95em;
+  line-height: 1.5;
+   background: #f8f9fa;      
+  border-left: 4px solid #667eea; 
+  padding: 10px 15px;
+  font-weight: 500;         
+  margin-bottom: 20px;  
+}
+    .card.expanded .card-content {
+      display: block;
+    }
+.content h2{
+  color: #667eea;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>ABM Strand</h1>
+      <p>Accountancy,Business and Management</p>
+    </header>
+
+    <div class="content">
+      <h2>GRADE 11 ABM SUBJECTS</h2>
+      <div class="card-grid">
+        
+        <div class="card">
+          <h3>Reading and Writing Skills</h3>
+          <div class="card-content">
+            Reading and writing teaches essential skills for understanding, analyzing, 
+            and producing various types of texts, focusing on critical thinking, different 
+            writing patterns (narration, description, persuasion, etc.), organizing information 
+            using tools like graphic organizers, and connecting reading to writing for academic 
+            and professional success. It bridges decoding and comprehension with written expression, 
+            showing how reading informs writing and vice versa. </div>
+        </div>
+
+        <div class="card">
+          <h3>Statistics and Probability</h3>
+          <div class="card-content" class="highlight">
+            Statistics and Probability is a core mathematics subject dealing with collecting, 
+            analyzing, interpreting, and displaying data (Statistics) and the study of chance 
+            and likelihood of events (Probability), forming a crucial tool for decision-making, 
+            modeling uncertainty, and understanding patterns in science, finance, and daily life, 
+            covering topics from random variables and distributions to hypothesis testing and regression. 
+            It teaches how to reason from samples to populations (Statistics) and populations to samples 
+            (Probability) using concepts like normal distribution, sampling, and correlation. </div>
+        </div>
+
+        <div class="card">
+          <h3>Pagbasa at Pagsusuri ng Iba't Ibang Teksto Tungo sa Pananaliksik</h3>
+          <div class="card-content">
+            It focuses on reading, understanding, and analyzing various types of texts to build the skills students need to 
+            conduct systematic research and produce basic research writing.</div>
+        </div>
+
+        <div class="card">
+          <h3>Chemistry 2</h3>
+          <div class="card-content">
+            It builds on the fundamentals introduced in Chemistry 1 and focuses on more advanced chemical concepts, 
+            problem-solving, and applications in real-world and scientific settings</div>
+        </div>
+
+        <div class="card">
+          <h3>Basic Calculus</h3>
+          <div class="card-content">
+            Basic Calculus is the study of continuous change, built on the foundation of limits, 
+            and divided into two main branches: Differential Calculus (rates of change, slopes, derivatives) 
+            and Integral Calculus (accumulation, areas, integrals), linked by the Fundamental Theorem of Calculus, 
+            essential for science, engineering, and economics. Key topics include limits, continuity, differentiation rules, 
+            integration techniques, and applications like optimization</div>
+        </div>
+
+        <div class="card">
+          <h3>Practical Research</h3>
+          <div class="card-content">
+            Practical Research teach critical thinking and problem-solving through hands-on research, 
+            focusing on understanding phenomena (PR1) and testing hypotheses (PR2) for real-world 
+            application, moving from inquiry to investigation and immersion. </div>
+        </div>
+
+        <div class="card">
+          <h3>Empowerment Technologies (ETECH)</h3>
+          <div class="card-content">
+            ETECH focuses on digital literacy, online safety, research, 
+            and practical skills with web platforms (like social media, cloud) 
+            and apps (image/video editing) to become tech-savvy individuals for academic and professional life. </div>
+        </div>
+
+        <div class="card">
+          <h3>Disaster Readiness and Risk Reduction (DRRR)</h3>
+          <div class="card-content">
+            Disaster Readiness and Risk Reduction (DRRR) focuses on understanding disasters, 
+            hazards (like earthquakes, typhoons, floods), and developing practical skills for 
+            preparedness, mitigation, and response, teaching students to assess risks, create 
+            emergency plans, and apply scientific knowledge to everyday life, crucial for 
+            disaster-prone regions like the Philippines. The curriculum covers hazards, 
+            vulnerability, exposure, risk factors, effects on people, and government policies, 
+            aiming to build resilient individuals and communities. </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Expand card on click
+    document.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        card.classList.toggle('expanded');
+      });
+    });
+  </script>
+</body>
+</html>
